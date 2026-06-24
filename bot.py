@@ -8,8 +8,9 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
 
-TOKEN = "YOUR_BOT_TOKEN"  # @BotFather dan oling
-BOT_USERNAME = "YOUR_BOT_USERNAME"  # masalan: myanonbot (@ belgisisiz)
+import os
+TOKEN = os.getenv("TOKEN")
+BOT_USERNAME = os.getenv("BOT_USERNAME")
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
